@@ -1,0 +1,137 @@
+.edit-profile-container{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10vh;
+    height: 76vh;
+    border: 2px rgb(200, 0, 0) solid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2%;
+    background: rgba(20, 20, 20, 1);
+}
+h1 {
+    color: red;
+    width: 100%;
+    height: fit-content;
+}
+.avatar-username{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: white;
+    justify-content: flex-start;
+    margin-left: 20%;
+    align-items: center;
+}
+.photo-change{
+    position: absolute;
+    color: white;
+    height: fit-content;
+    margin-left: 0.8vw;
+    border-radius: 40px;
+    background: rgba(128, 128, 128, 0.4);
+    width: 4.6vw;
+}
+.remove-pic{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 4vh;
+}
+.remove-pic button{
+    height: 3vh;
+    background-color: #a00;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0.9;
+    margin-left: 0.5vw;
+}
+.remove-pic button:hover{
+    opacity: 1;
+}
+.remove-pic button:focus{
+    transform: translateY(1.5px);
+    transition: 0.1s;
+}
+.photo-change label{
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    width: 100%;
+    border-radius: 40px;
+
+}
+.info-changer {
+    width: 100%;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    flex-wrap:wrap ;
+
+}
+.info-changer div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 7vw;
+}
+.info-changer-input{
+    height:4vh;
+    max-width: 50%;
+    border-radius: 12px;
+    margin-left: 1.6vw;
+    margin-bottom: 1.6vh;
+    padding: 6px;
+    width: 45%;
+}
+.save-info-btn{
+    width : 7vw;
+    height: 5vh;
+    color: white;
+    background: rgb(180, 0, 0);
+    cursor: pointer;
+    border-radius: 16px;
+    border: none;
+    opacity: 0.9;
+    margin-top: 3vh;
+    justify-self: center;
+    margin-right: 18%;
+}
+.save-info-btn:hover{
+    opacity: 1;
+}
+.save-info-btn:focus{
+    transform: translateY(1.5px);
+    transition: 0.1s;
+}
+.photo-change-input{
+    border: none;
+    display: none;
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    border-radius: 40px;
+height: fit-content;
+background-color: transparent;
+}
+.photo-select{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-form-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-left: 20%;
+}
+.info-form-container form {
+   width: 100%;
+}

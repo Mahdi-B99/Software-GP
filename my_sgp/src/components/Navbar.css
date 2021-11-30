@@ -1,0 +1,162 @@
+
+.Navbar {
+    background-color: #141414;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position:sticky;
+    color : white;
+    align-content: space-between;
+    
+}
+.Website-name{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 20%;
+    min-height: 100%;
+    font-size: 16px;
+    font-style:normal   ;
+    background: linear-gradient(90deg,rgb(14,14,14),#400000,rgb(100,0,0),rgb(150, 0, 0),rgb(175,0,0),rgb(150, 0, 0),rgb(100,0,0),rgb(40,0,0),#141414);
+
+}
+.Website-name button{
+    background: none;
+    border: none;
+    color: white;
+    min-height: 100%;
+    min-width: 60%;
+    border-radius: 20px;
+}
+.Website-name button:hover{
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.unAuth-User{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 30%;
+    min-width: 16%;
+    color: white;
+    align-items: stretch;
+    
+    
+}
+.Auth-User{
+    display: flex;
+    justify-content: flex-end;
+    max-width: 30%;
+    min-width: 16%;
+    margin-right: 1%;
+    color: white;
+    align-items: center;
+}
+.unAuth-User div {
+ width: 100%;
+ display: flex;
+ height: 100%;
+ align-items: center;
+ justify-content: center;
+}
+.auth-user-icon{
+    
+    margin-right: 1%;
+    cursor: pointer;
+   object-fit: cover;
+}
+.drop-menu{
+    background: #101010;
+    color: white;
+    border: 1px red solid;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+justify-content: stretch;
+    top: 7vh;
+    height: 10.5vh;
+    width: 8vw;
+    opacity: 1;
+    right: 0.2%;
+    transition: opacity 0.5s ease-in-out;
+
+}
+.drop-menu::before{
+    opacity: 0;
+    transition: ease-in-out 0.5s all;
+
+}
+
+
+.menu-item{
+    width: 100%;
+    height: 3.5vh;
+    opacity: 0.8;
+}
+.menu-item button{
+    color: white;
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    
+    opacity: 0.8;
+}
+.menu-item:hover{  
+      opacity: 1;
+      background: red;
+      font-weight: bold;
+}
+.menu-item button:hover{
+    font-weight: bold;
+}
+
+.Signup .signup-button {
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(90deg,rgb(75, 34, 34),#801414,#991414);
+    color: white;
+    font-size: 16px;
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 16px;
+    border-right: 1px solid black;
+}
+.Login .login-button{
+    cursor: pointer;
+    background: linear-gradient(90deg,#991414,#801414,rgb(75, 34, 34));
+    border: none;
+     color: white ;
+    font-size: 16px;
+    min-height: 100%;
+    min-width: 100%;
+    border-left: 1px solid black;
+    border-radius: 16px;
+}
+.unAuth-User button:hover{
+    background: linear-gradient(90deg,rgba(55, 24, 24,0.8),rgba(95,24,24,0.8),rgba(120,24,24,0.8));
+
+    transition: all 0.5s;
+}
+
+.home-link{
+    text-decoration: none;
+    width: 20%;
+    height: 100%;
+}
+.link{
+    text-decoration: none;
+    width: 100%;
+}
+@media (max-width: 680px) {
+    .drop-menu{
+        width: 17vw;
+        font-size: small;
+        font-weight: 800;
+    }
+    
+}

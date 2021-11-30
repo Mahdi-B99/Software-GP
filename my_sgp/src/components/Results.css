@@ -1,0 +1,109 @@
+.results-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52vh;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+
+
+.result-image{
+    
+   width: 100%;
+   overflow: hidden;
+   object-fit: cover;
+}
+
+.result-image:hover{
+ 
+  z-index: 0;
+}
+
+.card-wrapper {
+    position: relative;
+    
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    max-width: 300px;
+    height: 40vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+
+  }
+  .card-wrapper > :hover {
+    box-shadow: 1px 1px 10px 10px #17191c;
+    transform: scale(1.1);
+  transition: 0.6s;
+  
+  }
+
+  .image-desc {
+    color: white;
+    background: rgba(0,0,0,0.6);
+    min-width: 12.8vw;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -3.5vh;
+    z-index: 10;
+}
+
+  
+  .card-wrapper:active,
+  .card-wrapper:hover,
+  .card-wrapper:focus {
+    outline: none;
+    border: none;
+  }
+  
+  .carousel .slick-prev,
+  .carousel .slick-next {
+    width: 30px;
+    height: 40vh;
+    color: rgb(255, 26, 26);
+    background-color: rgba(255, 26, 117, 0);
+  }
+  
+  .carousel .slick-prev:hover,
+  .carousel .slick-prev:focus,
+  .carousel .slick-next:hover,
+  .carousel .slick-next:focus {
+    color: rgba(255, 26, 26, 1);
+    outline: none;
+    background: rgba(33, 33, 33, 0);
+  }
+  
+  .carousel .slick-prev:before,
+  .carousel .slick-next:before {
+    color: rgba(255, 26, 26, 1);
+
+  }
+  
+  .carousel .slick-next {
+    right: -27px;
+    z-index: 1;
+  
+  }
+  
+  .carousel .slick-prev {
+    left: -27px;
+    z-index: 1;
+
+  }
+  .slick-track {
+    display: flex;
+  }
+  .slick-slider{
+      width: 90%;
+  }
+

@@ -1,0 +1,27 @@
+.output-genres{
+    width:50%;
+    border-radius: 16px;
+    color: white;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.output-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.output-genres div {
+    margin: 1%;
+    padding: 10px;
+    border-radius: 16px;
+    font-weight: bolder;
+    text-shadow: -1px 1px 4px rgba(70, 70, 70, 0.8);
+}
+
+h2{
+    color: white;
+    width: 100%;
+}

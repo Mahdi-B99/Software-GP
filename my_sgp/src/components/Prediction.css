@@ -1,0 +1,136 @@
+.prediction-container {
+  border:2px red solid;
+  border-radius: 16px;
+  height: 100%;
+  width: 90%;
+  margin-top: 8%;
+  margin-left: 5%;
+  position: relative;
+
+}
+.mini-prediction-container {
+  border:1px red solid;
+  border-radius: 16px;
+  height: 100%;
+  width: 96%;
+  margin: 2%;
+  overflow: hidden;
+position: relative;
+
+
+}
+
+.mini-prediction-body {
+    margin: 1%;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-self: flex-start;
+   flex-wrap: wrap;
+}
+.prediction-info-title {
+    font-size: 20px;
+    font-weight: bold;
+    width: 15%;
+    margin-left: 1.5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+}
+
+.prediction-body {
+    margin: 2%;
+    width: 96%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.prediction-body h2 {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.synopsis{
+    text-align: center;
+    margin: 3%;
+    border: none;
+    font-size: 15px;
+    height:62px;
+    width: 94%;
+    display: flex;
+    background: #151515;
+    margin: 1.5%;
+   color: white;
+   resize: none;
+}
+.mini-synopsis{
+    border: none;
+    font-size: 15px;
+    height:62px;
+    width: 70%;
+    display: flex;
+    background: #151515;
+    margin: 1.5%;
+   color: white;
+   resize: none;
+   
+   
+}
+.prediction-output{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 15%;
+}
+.prediction-title{
+    margin: 1%;
+    width: 94%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.genre {
+
+  color: white;
+}
+
+hr{
+    flex-basis: 100%;
+    height: 0;
+      margin: 0;
+       border: 0;
+}
+.recommendation-title{
+    color:white;
+    
+    font-Size:22px;
+    font-weight:bold;
+     margin-top:5vh;
+    opacity:1;
+}
+.prediction-link-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2%;
+    width: 100%;
+}
+.prediction-link{
+    color: white;
+    
+    text-decoration: none;
+}
+.prediction-link:hover{
+    font-weight: bold;
+    transition: 0.125s;
+}
+.remove-icon {
+    color: red;
+    font-size: 20px;
+    margin-left: 2.4vw;
+    margin-top: 1vh;
+    cursor: pointer;
+}

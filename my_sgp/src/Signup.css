@@ -1,7 +1,8 @@
 .signup-form-container {
    display: flex;
    justify-content: center;
-   min-width: 100%;
+   width: 80%;
+   margin-left: 10%;
    min-height: 100%;
    align-items: center;
     
@@ -13,26 +14,27 @@
     align-items: center;
     min-width: 32vw;
     max-width: 36vw;
-    min-height: 40vh;
-    margin-top:15vh;
+    min-height: 60vh;
+    margin-top:6vh;
     border-radius: 16px;
     opacity: 1;
     background: linear-gradient(135deg,rgb(180,0,0),rgb(120,0,0),rgb(70,0,0),rgb(40,0,0));
     color: white;
+    gap: 0.5rem;
 }
 .signup-form-title {
     margin:10px;
     font-size: 22px;
     font-weight: bold;
     width: 100%;
-    align-self: center;
 }
 .signup-input {
-    margin: 2%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    height:40vh;
+    gap: 0.5rem;
 
 }
 .signup-input hr {
@@ -81,7 +83,8 @@
     margin-top: 1.5vh;
     cursor: pointer;
     font-size: 18px;
-    width: 5.5vw;
+    width: 7vw;
+    max-width: 8vw;
     height: 4.5vh;
     border: none;
     border-radius: 14px;
@@ -102,4 +105,65 @@
     color: white;
     min-width: 50px;
     text-align: center;
+}
+.success-msg{
+    color: rgb(26, 212, 26);
+    font-size: 1rem;
+    font-weight: 800;
+
+}
+.fail-msg{
+    color: red;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 40%;
+    text-align: left;
+}
+@media (max-width: 680px){
+    .signup-btn{
+        width: 15vw;
+        max-width: 18vw;
+
+    }
+    .signup-form{
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 680px){
+  @media (max-width: 960px){
+    .signup-btn{
+        width: 12vw;
+        max-width: 13.5vw;
+
+    }
+    .signup-form{
+        min-width: 60%;
+        max-width: 60%;
+    }
+}
+}
+@media (min-width: 960px){
+    @media(max-width: 1280px){
+    .signup-btn{
+        width: 8vw;
+        max-width: 10vw;
+
+    }
+    .signup-form{
+        min-width: 50%;
+        max-width: 60%;
+    }
+}
+}
+@media (min-width: 1280px){
+    .signup-btn{
+        width: 6vw;
+        max-width: 7vw;
+
+    }
+    .signup-form{
+        min-width: 40%;
+        max-width: 42%;
+    }
 }

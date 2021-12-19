@@ -17,7 +17,34 @@
   overflow: hidden;
 position: relative;
 
+}
+.remove-menu{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 15vh;
+    width: 20vw;
+    background: linear-gradient(360deg,#400000,#600000,#800000,rgb(120,0,0));
+    position: absolute;
+    /*left: 40%;
+    top:55%;*/
+    margin-left: 14%;
+    gap: 1rem;
+    z-index: 10;
+    border-radius: 16px;
+}
+.remove-menu p{
+    text-align: center;
+    font-weight: bold;
 
+}
+.remove-menu button{
+    width: 5vw;
+    height: 3vh;
+    background: rgb(125, 0, 0);
+    color: white;
+    
 }
 
 .mini-prediction-body {

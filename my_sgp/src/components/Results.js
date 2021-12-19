@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import PropTypes from "prop-types"
 import { useEffect, useState } from "react";
-import QueryString from "qs";
+
 function Results(props) {
 Results.propTypes={
   genres: PropTypes.array,
@@ -14,11 +14,12 @@ Results.propTypes={
 const [genres,setGenres]=useState([])
   async function getRecommendation(){
      setGenres(props.genres)
-     console.log(genres)
+     
 
     try {
       let response = await axios.get(`http://localhost:3001/rec?genres=${JSON.stringify(genres)}`)
-     console.log(response)
+      
+     
     } catch(error){
       console.log(error)
     }

@@ -1,0 +1,26 @@
+DELETE  http://localhost:3001/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEwLCJ1c2VyTmFtZSI6Im1vaGFtbWVkIiwiZW1haWwiOiJtb2hhbW1lZEBob3RtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFp2UzRERGl0SURHY0w5WllVeWRCVy5xMmtDSVlEcmN0TFhrN1lhQnlJUEgwNm9hV2Q1UVhpIiwiaW1hZ2UiOm51bGwsImlhdCI6MTYzOTE4MTgyN30.z4UxyYAfrzm2zpMtig0pogCIjbHmjyAmU6Wq4SWb_TM"
+    }
+###
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "username" : "mohammed",
+    "password" : "123"
+}
+###
+
+POST http://localhost:3001/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEwLCJ1c2VyTmFtZSI6Im1vaGFtbWVkIiwiZW1haWwiOiJtb2hhbW1lZEBob3RtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFp2UzRERGl0SURHY0w5WllVeWRCVy5xMmtDSVlEcmN0TFhrN1lhQnlJUEgwNm9hV2Q1UVhpIiwiaW1hZ2UiOm51bGwsImlhdCI6MTYzOTAwNDI1OX0.5BTR_JGJIj5luQEHXfDZkJ9P7qVt20exL4UtXauxw1I"
+      }
+###
+
+GET  http://localhost:3001/userInfo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEwLCJ1c2VyTmFtZSI6Im1vaGFtbWVkIiwiZW1haWwiOiJtb2hhbW1lZEBob3RtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFp2UzRERGl0SURHY0w5WllVeWRCVy5xMmtDSVlEcmN0TFhrN1lhQnlJUEgwNm9hV2Q1UVhpIiwiaW1hZ2UiOm51bGwsImlhdCI6MTYzOTAwMzc3NCwiZXhwIjoxNjM5MDAzODM0fQ.hcmAMFsHUwJltrA25ERqZrmhMTZmCAKZphr6_Q30Daw

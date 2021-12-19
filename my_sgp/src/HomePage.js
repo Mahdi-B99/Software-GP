@@ -1,5 +1,4 @@
 import InputForm from "./components/InputForm";
-import GenreOutput from "./components/GenreOutput";
 import Results from "./components/Results";
 import { Genres } from "./components/genres";
 function HomePage(){
@@ -10,11 +9,8 @@ function HomePage(){
         <div>
         <InputForm />
         </div>
-        <GenreOutput numOfGenres={3} />
-        <div className="recommendation-title"> Recommended Shows</div>
-        <div className="container mt-5 carousel">
-        <Results genres={Genres} />
-        </div>
+        
+        
         </div>
     )
 }

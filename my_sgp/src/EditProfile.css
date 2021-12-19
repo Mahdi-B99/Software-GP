@@ -2,7 +2,7 @@
     width: 40%;
     margin-left: 30%;
     margin-top: 10vh;
-    height: 76vh;
+    height: 80vh;
     border: 2px rgb(200, 0, 0) solid;
     display: flex;
     flex-wrap: wrap;
@@ -16,7 +16,69 @@ h1 {
     width: 100%;
     height: fit-content;
 }
+.Avatar{
+    cursor: pointer;
+}
+.image-view{
+    position: absolute;
+    height: 80%;
+    width: 60%;
+    background: black;
+    margin-left: 20%;
+    z-index: 10;
+}
+.image-view img{
+    z-index: 8;
+}
+.close-image-view{
+    position: absolute;
+    margin-left: 96%;
+    margin-top: 1%;
+    z-index: 10;
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.avatar-menu{
+    width: 5.5vw;
+    position: absolute;
+    margin-top: 16vh;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: red 1px solid;
+    
+}
+.photo-change-label{
+    color: white;
+    background: #141414;
+    width: 100%;
+    height: 3vh;
+    border:none;
+    cursor: pointer;
+    text-align: center;
+    font-size: normal;
+
+}
+.photo-change-label:hover{
+background: gray;
+}
+.avatar-menu button{
+    color: white;
+    background: #141414;
+    width: 100%;
+    height: 3vh;
+    border:none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.avatar-menu button:hover{
+    background: gray;
+}
 .avatar-username{
+    height: 14vh;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -34,23 +96,27 @@ h1 {
     background: rgba(128, 128, 128, 0.4);
     width: 4.6vw;
 }
-.remove-pic{
+.photo-change-form{
     display: flex;
     justify-content: flex-start;
     width: 100%;
     height: 4vh;
+    margin-top: 3vh;
 }
-.remove-pic button{
+
+.save-photo-btn{
     height: 3vh;
+    width: 5vw;
     background-color: #a00;
     border: none;
     color: white;
     border-radius: 12px;
     cursor: pointer;
     opacity: 0.9;
-    margin-left: 0.5vw;
+    margin-left: 0.75vw;
+    z-index: 3;
 }
-.remove-pic button:hover{
+.save-photo-btn:hover{
     opacity: 1;
 }
 .remove-pic button:focus{
@@ -72,7 +138,7 @@ h1 {
     font-size: 22px;
     display: flex;
     flex-wrap:wrap ;
-
+    margin-top: 1.5vh;
 }
 .info-changer div{
     display: flex;
@@ -134,4 +200,21 @@ background-color: transparent;
 }
 .info-form-container form {
    width: 100%;
+}
+.msg{
+    color: red;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 100%;
+}
+@media (max-width: 680px){
+
+    .edit-profile-container{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .save-photo-btn{
+        width: 17vw;
+        margin-left: 2vw;
+    }
 }

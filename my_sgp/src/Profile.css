@@ -99,3 +99,39 @@ transition: 0.5s;
 .filter-icon button:hover{
     opacity: 1;
 }
+.filters-menu-container::after{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 30vh;
+}
+.filters-menu-container::before{
+    width: 0;
+    height: 0;
+  
+}
+.filters-menu{
+    height: 30vh;
+ width: 100%;
+ position: relative;
+ display: flex;
+ justify-content: space-evenly;
+ align-content: center;
+
+ background: linear-gradient(360deg,#400000,#600000,#800000,rgb(120,0,0));
+ 
+}
+
+.filters-menu ul{
+    list-style-type: none;
+    gap: 1rem;
+    margin-top: 4vh;
+    padding-left: 0;
+    font-weight: bolder;
+}
+.filters-menu  li{
+    margin-top: 9%;
+    margin-left:2.4% ;
+    cursor: pointer;
+    font-weight: 300;
+}

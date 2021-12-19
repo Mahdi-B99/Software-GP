@@ -5,15 +5,27 @@ import PropTypes from "prop-types";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import {AiOutlineClose} from "react-icons/ai";
+import { useState } from "react";
 function Prediction(props) {
     Prediction.propTypes={
     }
 
 const location=useLocation();
-console.log(location);
 const pathname=location.pathname;
-return (
-pathname === "/Prediction" ? (
+const [remMenu,setRemMenu]=useState(false)
+
+const removePrediction= ()=>{
+   setRemMenu(!remMenu)
+}
+return ( <>
+{remMenu ? (<div className="remove-menu" >
+    <p> do you want to remove it from the prediction history ?</p>
+    <button>Yes</button>
+    <button onClick={removePrediction}>No</button>
+
+    </div>): ""}
+
+{pathname === "/Prediction" ? (
     <div className="prediction-container">
      <div className="prediction-body">
      <h2>Synopsis </h2>
@@ -38,7 +50,8 @@ pathname === "/Prediction" ? (
  <div className="mini-prediction-body">
 <div className="prediction-info-title">Synopsis :</div>
 <textarea readOnly={true} rows={3} disabled={true} className="mini-synopsis" value="As a math savant uncooks the books for a new client, the Treasury Department closes in on his activities, and the body count starts to rise." > 
-</textarea>        <AiOutlineClose className="remove-icon" />
+</textarea>       
+ <AiOutlineClose onClick={removePrediction} className="remove-icon" />
 
 <hr/>
     <div className="prediction-info-title">Genres : </div>
@@ -47,8 +60,8 @@ pathname === "/Prediction" ? (
 <Link className="prediction-link" to={"/Prediction"}>...view more info</Link>    
 </div>
 </div>
-</div>)
-    
+</div>)}
+    </>
 )
 
 }

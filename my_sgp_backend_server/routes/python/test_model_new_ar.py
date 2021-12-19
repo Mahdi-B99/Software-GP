@@ -1,3 +1,5 @@
+import json
+from scipy.sparse import data
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.corpus import stopwords
@@ -46,7 +48,23 @@ def infer_tags(q, Tfidf_vect, model, multilabel_binarizer):
     y_pred_prob = model.predict_proba(q_vec)
     t = 0.25  # threshold value
     y_pred_new = (y_pred_prob >= t).astype(int)
-    return "Genres: " + str(multilabel_binarizer.inverse_transform(y_pred_new)) + "Probability: " + str(y_pred_prob)
+    y_pred_prob = str(y_pred_prob)
+    y_pred_prob = y_pred_prob[2: -2]
+    y_pred_prob = y_pred_prob.split(" ")
+    probthresh = []
+    for prob in y_pred_prob:
+        if len(prob) > 1:
+            if float(prob.replace("\\n", " ")) >= t:
+                probthresh.append(prob)
+
+    data = {
+        "genres": str(multilabel_binarizer.inverse_transform(y_pred_new)),
+        "probability": str(probthresh)
+
+    }
+    info = json.dumps(data)
+    return info
+    # return " Genres: " + str(multilabel_binarizer.inverse_transform(y_pred_new)) + "Probability: " + str(y_pred_prob)
     # return multilabel_binarizer.inverse_transform(y_pred_new)
     # return multilabel_binarizer.inverse_transform(q_pred)
 
@@ -54,8 +72,9 @@ def infer_tags(q, Tfidf_vect, model, multilabel_binarizer):
 @app.route("/")
 def predict():
     text = request.args.get('text')
+
     df = pd.read_csv(
-        r'C:\Users\Mahdi Barham\Desktop\SGP\Software-GP\my_sgp_backend_server\routes\python\clean4.csv', index_col=False)
+        'C:/Users/Mahdi Barham/Desktop/SGP/Software-GP/my_sgp_backend_server/routes/python/clean7.csv', index_col=False)
     df['genre'] = df.genre.apply(lambda x: ast.literal_eval(str(x)))
 
     multilabel_binarizer = MultiLabelBinarizer()
@@ -63,13 +82,14 @@ def predict():
     y = multilabel_binarizer.transform(df['genre'])
 
     model = pickle.load(open(
-        'C:\\Users\Mahdi Barham\Desktop\SGP\Software-GP\my_sgp_backend_server\routes\python\arabic_model.pkl', 'rb'))
+        'C:/Users\Mahdi Barham/Desktop/SGP/Software-GP/my_sgp_backend_server/routes/python/arabic_model_new.pkl', 'rb'))
     # vocab = pickle.load(open("arabic_vocabulary.pkl", 'rb'))
-    Tfidf_vect = pickle.load(open("arabic_tfidf.pkl", 'rb'))
+    Tfidf_vect = pickle.load(open(
+        "C:/Users\Mahdi Barham/Desktop/SGP/Software-GP/my_sgp_backend_server/routes/python/arabic_tfidf_new.pkl", 'rb'))
     # Tfidf_vect = TfidfVectorizer(vocabulary=vocab)
 
     # print("Predicted genre: ", infer_tags(text, Tfidf_vect, model, multilabel_binarizer))
-    return str(infer_tags(text, Tfidf_vect, model, multilabel_binarizer))
+    return json.loads(infer_tags(text, Tfidf_vect, model, multilabel_binarizer))
 
 
 if __name__ == '__main__':
